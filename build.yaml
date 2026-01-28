@@ -19,7 +19,7 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: zonkey_R_rgbled_adapter
+    shield: "zonkey_R rgbled_adapter"
   - board: seeeduino_xiao_ble
     shield: zonkey_L rgbled_adapter
   - board: seeeduino_xiao_ble
