@@ -156,6 +156,24 @@
             mods = <(MOD_LALT)>;
             keep-mods = <(MOD_LALT)>;
         };
+
+        jj_none: jj_none {
+            compatible = "zmk,behavior-tap-dance";
+            label = "JJ_NONE";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>, <&none>;
+
+            tapping-term-ms = <50>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&tog 1>;
+
+            tapping-term-ms = <50>;
+        };
     };
 
     keymap {
@@ -180,10 +198,10 @@
 
         vim_normal_layer {
             bindings = <
-&trans    &trans  &trans      &trans  &vim_tab                    &kp LC(C)       &vim_U          &tog 1        &trans           &kp LC(V)
-&alt_tab  &trans  &vim_D      &trans  &vim_G    &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans    &trans  &kp DELETE  &trans  &trans    &trans    &trans  &trans          &mkp MB1        &mkp MB3      &mkp MB2         &kp LC(F)
-&trans    &trans  &trans      &trans  &trans    &trans            &trans          &trans                                                    &lt 6 ESCAPE
+&trans    &trans  &trans      &trans  &vim_tab                    &kp LC(C)       &vim_U    &tog 1        &trans           &kp LC(V)
+&alt_tab  &trans  &vim_D      &trans  &vim_G    &trans    &trans  &kp LEFT_ARROW  &jj_none  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans    &trans  &kp DELETE  &trans  &trans    &trans    &trans  &trans          &mkp MB1  &mkp MB3      &mkp MB2         &kp LC(F)
+&trans    &trans  &trans      &trans  &trans    &trans            &trans          &trans                                              &lt 6 ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
