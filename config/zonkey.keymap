@@ -161,16 +161,15 @@
             compatible = "zmk,behavior-tap-dance";
             label = "JJ_NONE";
             #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&none>;
-
-            tapping-term-ms = <50>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            bindings = <&kp J>, <&tog 1>;
+            bindings =
+                <&kp DOWN>,
+                <&none>,
+                <&none>,
+                <&none>,
+                <&none>,
+                <&none>,
+                <&none>,
+                <&none>;
 
             tapping-term-ms = <50>;
         };
